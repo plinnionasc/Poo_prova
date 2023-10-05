@@ -1,38 +1,38 @@
-class DistribuicaoAlimento {
-    private String nomeProjeto;
-    private String descricao;
-    private String dataInicio;
-    private String dataFim;
-    private String descAlimento;
-    private int qtde;
+import javax.swing.JOptionPane;
 
-    public DistribuicaoAlimento(String nomeProjeto, String descricao, String dataInicio, String dataFim, String descAlimento, int qtde) {
-        this.nomeProjeto = nomeProjeto;
-        this.descricao = descricao;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
-        this.descAlimento = descAlimento;
-        this.qtde = qtde;
+class Usuario {
+    private String nome;
+    private String email;
+    private String telefone;
+
+    public Usuario(String nome, String email, String telefone) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
     }
 
     // Getters e Setters
-    // ...
-
-    public boolean validaProjeto(String nomeProjeto) {
-        return this.nomeProjeto.equals(nomeProjeto) && this.dataFim.isEmpty();
+    public String getNome() {
+        return nome;
     }
 
-    public String imprimeProjeto() {
-        return "Nome do Projeto: " + nomeProjeto +
-                "\nDescrição: " + descricao +
-                "\nData de Início: " + dataInicio +
-                "\nData de Fim: " + dataFim +
-                "\nDescrição do Alimento: " + descAlimento +
-                "\nQuantidade: " + qtde;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getNomeProjeto() {
-        return null;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
-
